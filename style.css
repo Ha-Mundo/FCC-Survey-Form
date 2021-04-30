@@ -1,0 +1,307 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+:root {
+  --black-regular: rgba(24, 29, 38, 1);
+  --black-bold: rgba(1, 6, 38, 1);
+  --light-green: rgb(172, 242, 200);
+  --pink: rgba(242, 172, 197, 1);
+  --dark-purple: #c04cfd;
+  --color-purple: #fa52fd;
+  --color-green: #27fb6b;
+  --light-blue: #9ac4f8;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  background: linear-gradient(180deg, #f4c6ff 0%, #e9fffa 100%);
+  font-family: "Press Start 2P", cursive, sans-serif;
+  color: var(--black-regular);
+}
+
+h1 {
+  font-family: "Press Start 2P";
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 60px;
+  color: var(--color-purple);
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 20px;
+  line-height: 30px;
+  padding: 10px 0 0 3px;
+}
+
+input,
+select,
+textarea,
+option,
+.wrapper-checkbox,
+.wrapper-radio {
+  background-color: var(--light-green);
+  border: 2px solid var(--light-blue);
+  border-radius: 5px;
+  padding: 8px;
+  margin-top: 5px;
+  resize: vertical;
+}
+
+legend {
+  padding: 30px 0 2px 10px;
+}
+
+button {
+  background-color: var(--color-green);
+  border: solid 1px var(--light-blue);
+  color: var(--black-regular);
+  font-family: "Press Start 2P";
+  font-size: 18px;
+  text-transform: uppercase;
+  border-radius: 5px;
+  padding: 6px 40px;
+  cursor: pointer;
+  transition: 0.4s ease all;
+}
+
+button:hover {
+  background-color: var(--light-blue);
+  border: solid 1px var(--color-green);
+}
+
+#wrapper-main {
+  max-width: 1500px;
+  margin: 2rem auto;
+}
+
+#wrapper-title {
+  margin: auto;
+  text-align: center;
+}
+
+#survey-form {
+  width: 60%;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: var(--dark-purple);
+  border-radius: 20px;
+  font-size: 18px;
+  box-shadow: 12px 15px 0.7em rgba(155, 201, 191, 0.3),
+    -2px -3px 0.7em rgba(155, 201, 191, 0.3);
+}
+
+#wrapper-form-info {
+  margin: 8%;
+}
+
+#name,
+#email,
+#dropdown,
+#number,
+#suggestion {
+  width: 100%;
+}
+
+#name,
+#email,
+#dropdown,
+#number {
+  height: 40px;
+}
+
+#suggestion {
+  height: 150px;
+}
+
+.font-form {
+  font-family: "Press Start 2P", cursive, sans-serif;
+  color: var(--black-regular);
+  font-size: 16px;
+}
+
+.d-flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.d-flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 10px;
+}
+
+.two-column {
+  width: 50%;
+}
+
+.d-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  justify-items: start;
+  margin: 0 10px 10px 10px;
+}
+
+.wrapper-checkbox,
+.wrapper-radio {
+  width: 100%;
+  padding: 10px;
+}
+
+.checkbox,
+.radio {
+  display: none;
+}
+
+.checkbox-label,
+.radio-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.radio-label:before {
+  content: "\25CE";
+  display: inline-block;
+  height: 1.4rem;
+  width: 1.4rem;
+  background-color: var(--light-green);
+  color: var(--light-green);
+  border: 2px solid var(--pink);
+  text-align: center;
+  border-radius: 50%;
+  margin-right: 10px;
+  font-size: 1.5rem;
+  line-height: 1.05rem;
+  transition: 0.3s ease-in-out;
+}
+
+.checkbox-label:before {
+  content: "\2713";
+  display: inline-block;
+  height: 1.4rem;
+  width: 1.4rem;
+  background-color: var(--light-green);
+  color: var(--light-green);
+  border: 2px solid var(--pink);
+  text-align: center;
+  border-radius: 2px;
+  margin-right: 10px;
+  font-size: 1.5rem;
+  line-height: 1.05rem;
+  transition: 0.3s ease-in-out;
+}
+
+.radio:checked + .radio-label:before {
+  background-color: var(--pink);
+}
+
+.checkbox:checked + .checkbox-label:before {
+  background-color: var(--pink);
+}
+
+.suggestion-label {
+  margin-top: 15px;
+}
+
+.wrapper-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+footer p {
+  text-align: center;
+  padding: 15px;
+  color: var(--light-blue);
+}
+
+/* Media Queries */
+@media screen and (max-width: 1000px) {
+  header .d-flex-row {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  h1 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+  #survey-form {
+    width: 70%;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  header .d-flex-row {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  h1 {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  #survey-form {
+    width: 80%;
+    font-size: 14px;
+  }
+
+  .font-form {
+    font-size: 14px;
+  }
+
+  .d-grid {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  header .d-flex-row {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  header .d-flex-row .wrapper-title {
+    margin: 5%;
+  }
+
+  #survey-form {
+    width: 100%;
+    box-shadow: 0px -4px 1em rgba(155, 201, 191, 0.3),
+      0px 5px 1em rgba(155, 201, 191, 0.3);
+  }
+
+  #survey-form .d-flex-row {
+    flex-direction: column;
+  }
+
+  .two-column {
+    width: 100%;
+  }
+
+  .d-grid {
+    grid-template-columns: 1fr;
+  }
+}

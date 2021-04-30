@@ -1,0 +1,160 @@
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Survey Form</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div id="wrapper-main">
+    <header>
+      
+        <div id="wrapper-title" class="wrapper-title">
+          <h1 id="title">Video Games Survey!</h1>
+          <p id="description">
+            Please tell us your thoughts<br />
+            & feedback about video games.
+          </p>
+        </div>
+        
+      </div>
+    </header>
+
+    <main>
+      <form id="survey-form">
+        <div id="wrapper-form-info">
+          <section class="container-name">
+            <div class="d-flex-row">
+              <div class="d-flex-column two-column">
+                <label id="name-label" for="name">First Name</label>
+                <input type="text" class="font-form" name="name" id="name" placeholder="Enter your first name"
+                  required />
+              </div>
+              <div class="d-flex-column two-column">
+                <label id="name-label" for="name">Last Name</label>
+                <input type="text" class="font-form" name="name" id="name" placeholder="Enter your last name" required />
+              </div>
+            </div>
+          </section>
+          
+          <section class="container-dropdown-number">
+            <div class="form-group d-flex-row">
+              <div class="d-flex-column two-column">
+                <label for="dropdown">Gender</label>
+                <select class="font-form" name="dropdown" id="dropdown" required>
+                  <option disabled selected value>Select your Gender</option>
+                  <option value="female">Female</option>
+                  <option value="male">Male</option>
+                  <option value="other">Other</option>
+                  <option value="not-declare">Not Declare</option>
+                </select>
+              </div>
+
+              <div class="d-flex-column two-column">
+                <label id="number-label" for="number">Age</label>
+                <input type="number" class="font-form" min="18" max="120" name="age" id="number" placeholder="(optional)"
+                  />
+              </div>
+            </div>
+          </section>
+
+          <section class="container-email">
+            <div>
+              <div class="d-flex-column">
+                <label id="email-label" for="email">Email Address</label>
+                <input type="email" class="font-form" name="email" id="email" placeholder="Enter your email address"
+                  required />
+              </div>
+            </div>
+          </section>
+          
+          <section class="container-radio">
+            <div>
+              <legend>What kind of gamer are you?</legend>
+              <div id="selection" class="d-grid font-form">
+                <div class="wrapper-radio">
+                  <input type="radio" class="radio" id="radio-hardcore" name="radio" value="Hardcore" />
+                  <label for="radio-hardcore" class="radio-label">Hardcore Gamer</label>
+                </div>
+                <div class="wrapper-radio">
+                  <input type="radio" class="radio" id="radio-medium" name="radio" value="Medium-Gamer" checked/>
+                  <label for="radio-medium" class="radio-label">Medium Gamer</label>
+                </div>
+                <div class="wrapper-radio">
+                  <input type="radio" class="radio" id="radio-casual" name="radio" value="Casual-Gamer" />
+                  <label for="radio-casual" class="radio-label">Casual Gamer</label>
+                </div>
+                <div class="wrapper-radio">
+                  <input type="radio" class="radio" id="radio-no-gamer" name="radio" value="No-Gamer" />
+                  <label for="radio-no-gamer" class="radio-label">I'm not a gamer!</label>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="container-checkbox">
+            <div>
+              <legend>What genere do you like?</legend>
+              <div class="d-grid font-form">
+                <div class="wrapper-checkbox">
+                  <input type="checkbox" class="checkbox" id="selection-adventure" name="checkbox" value="Adventure" />
+                  <label for="selection-adventure" class="checkbox-label">Adventure</label>
+                </div>
+                <div class="wrapper-checkbox">
+                  <input type="checkbox" class="checkbox" id="selection-fighting" name="checkbox" value="Fighting" />
+                  <label for="selection-fighting" class="checkbox-label">Fighting</label>
+                </div>
+                <div class="wrapper-checkbox">
+                  <input type="checkbox" class="checkbox" id="selection-soul-like" name="checkbox" value="Soul-like" />
+                  <label for="selection-soul-like" class="checkbox-label">Soul like</label>
+                </div>
+                <div class="wrapper-checkbox">
+                  <input type="checkbox" class="checkbox" id="selection-rpg" name="checkbox" value="RPG" />
+                  <label for="selection-rpg" class="checkbox-label">RPG </label>
+                </div>
+                <div class="wrapper-checkbox">
+                  <input type="checkbox" class="checkbox" id="selection-fps" name="checkbox" value="FPS" />
+                  <label for="selection-fps" class="checkbox-label">FPS</label>
+                </div>
+                <div class="wrapper-checkbox">
+                  <input type="checkbox" class="checkbox" id="selection-none-of" name="checkbox" value="None-of-the-above" />
+                  <label for="selection-none-of" class="checkbox-label">None of the above</label>
+                </div>
+            </div>
+          </section>
+
+          <section class="container-suggestion">
+            <div>
+              <div class="d-flex-column">
+                <label for="suggestion" class="suggestion-label">Do you have any suggestion?</label>
+                <textarea class="font-form" name="suggestion" id="suggestion"
+                  placeholder="Please advice me some good game!"></textarea>
+              </div>
+            </div>
+          </section>
+
+          <section class="container-button">
+            <div class="wrapper-button">
+              <button id="submit">Submit</button>
+            </div>
+          </section>
+        </div>
+      </form>
+    </main>
+
+    <footer>
+      <div class="icons">
+        <p>Game-Survey&copy;</p>
+      </div>
+    </footer>
+
+  </div>
+</body>
+
+</html>
