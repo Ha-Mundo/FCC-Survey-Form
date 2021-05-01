@@ -19,7 +19,7 @@
 }
 
 body {
-  background: linear-gradient(180deg, #f4c6ff 0%, #e9fffa 100%);
+  background: linear-gradient(180deg, #a3ffbf 0%, #e9fffa 100%);
   font-family: "Press Start 2P", cursive, sans-serif;
   color: var(--black-regular);
 }
@@ -226,7 +226,7 @@ footer p {
 
 /* Media Queries */
 @media screen and (max-width: 1000px) {
-  header .d-flex-row {
+  header {
     width: 70%;
     margin: 0 auto;
   }
@@ -248,7 +248,7 @@ footer p {
 }
 
 @media screen and (max-width: 800px) {
-  header .d-flex-row {
+  header {
     width: 80%;
     margin: 0 auto;
   }
@@ -278,12 +278,12 @@ footer p {
 }
 
 @media screen and (max-width: 600px) {
-  header .d-flex-row {
+  header {
     width: 90%;
     margin: 0 auto;
   }
 
-  header .d-flex-row .wrapper-title {
+  header #wrapper-title {
     margin: 5%;
   }
 
